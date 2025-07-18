@@ -12,6 +12,8 @@ Responsive Design: Built with Tailwind CSS and Joy UI for a modern, responsive U
 Error Handling: Displays toast notifications for invalid inputs or errors using react-toastify.
 
 Project Structure
+
+```js
 src/
 ├── components/
 │   ├── Navbar.tsx          # Navigation bar component
@@ -25,6 +27,7 @@ src/
 ├── App.tsx                # Main app component with routing
 ├── translations.json       # Sample translation data
 
+```
 Prerequisites
 
 Node.js (v16 or higher)
@@ -42,13 +45,15 @@ npm install
 
 
 Ensure translations.json exists:Place the translations.json file in the public/translations/ directory with the following structure:
+
+```js
 {
   "words": [
     { "id": 1, "en": "Hello", "fa": "سلام", "ru": "Привет" },
     { "id": 2, "en": "World", "fa": "جهان", "ru": "Мир" }
   ]
 }
-
+```
 
 
 Usage
