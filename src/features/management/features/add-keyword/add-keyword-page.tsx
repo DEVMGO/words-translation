@@ -33,6 +33,15 @@ const AddKeyWordPage = () => {
         e.preventDefault();
         const storedWords = JSON.parse(localStorage.getItem('translations') || '{"words": []}').words as Word[];
 
+        const isDuplicate = storedWords.some(
+            (w) => String(w[language as keyof Word]).toLowerCase() === word.title.toLowerCase()
+        );
+
+        if (isDuplicate) {
+            toast.error(translations['duplicateError'][language]);
+            return;
+        }
+
         const keyword: Word = {
             id: storedWords.length + 1,
             en: '',
