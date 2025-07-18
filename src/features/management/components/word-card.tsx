@@ -28,7 +28,6 @@ const WordCard: FC<SortableWordCardProps> = ({
     const style = {
         transform: CSS.Transform.toString(transform),
         transition,
-        touchAction: 'none',
     };
 
     return (
@@ -40,6 +39,7 @@ const WordCard: FC<SortableWordCardProps> = ({
             <div
                 {...listeners}
                 {...attributes}
+                style={{ touchAction: 'none' }}
                 className="cursor-grab active:cursor-grabbing"
             >
                 <DragIndicatorIcon color='action' />

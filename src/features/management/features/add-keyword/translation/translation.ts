@@ -45,4 +45,9 @@ export const translations: Record<string, Translation> = {
     fa: "ترجمه خود را وارد کنید...",
     ru: "Введите ваш перевод.",
   },
+  duplicateError: {
+    en: "This word already exists in the selected language.",
+    fa: "این کلمه در زبان انتخاب‌شده قبلاً وجود دارد.",
+    ru: "Это слово уже существует в выбранном языке.",
+  },
 };
