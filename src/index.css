@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "YekanBakhFaNum";
+  src: url("../public/fonts/YekanBakhFaNum-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: YekanBakhFaNum !important;
+}
+
+.Toastify__toast-container {
+  max-width: 360px !important;
+  min-width: auto;
+}
+
+.Toastify__toast-body div {
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .Toastify__toast-container {
+    max-width: auto !important;
+    min-width: 100% !important;
+    right: 0 !important;
+  }
+}
