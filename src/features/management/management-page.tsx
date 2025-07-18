@@ -14,7 +14,7 @@ const ManagementPage = () => {
             <div className="w-full flex items-center justify-start flex-col sm:pb-5 pb-28">
                 <div className="w-full sm:max-w-72 flex items-center justify-start flex-col sm:px-0 pt-5 p-5 gap-5">
                     <WordList />
-                    <div className="w-full sm:block sm:sticky fixed bottom-0 left-0 sm px-0 p-5 sm:border-none border-t border-gray-300 bg-white">
+                    <div className="w-full sm:block sm:sticky fixed bottom-0 left-0 sm:px-0 p-5 sm:border-none border-t border-gray-300 bg-white">
                         <Link
                             to='add-keyword'
                             className="w-full rounded-xl bg-gradient-to-tl from-[#4a42b4] to-[#5679cd] 
