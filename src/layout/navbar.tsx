@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage, type Language } from "../context/context";
 import SelectLanguage from "./select-lang";
-import BackIcon from "../assets/icons/back-icon";
+import KeyboardBackspaceRoundedIcon from '@mui/icons-material/KeyboardBackspaceRounded';
 
 
 const Navbar = ({ title }: { title: string }) => {
@@ -29,7 +29,7 @@ const Navbar = ({ title }: { title: string }) => {
                                 title="mangement"
                             />
                             :
-                            <BackIcon strockWidth="2" strock="#000" className="w-9 h-3" />
+                            <KeyboardBackspaceRoundedIcon fontSize="large" className="w-9 h-3" />
                         }
                     </Link>
                 </div>

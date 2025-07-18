@@ -41,7 +41,12 @@ const WordList = () => {
     };
 
 
+    const handleDragStart = () => {
+        document.body.style.overflow = 'hidden';
+    };
+
     const handleDragEnd = (event: DragEndEvent) => {
+        document.body.style.overflow = 'auto';
         const { active, over } = event;
         if (over && active.id !== over.id) {
             setWords((prevWords) => {
@@ -62,7 +67,11 @@ const WordList = () => {
                 handleLanguageChange={handleLanguageChange}
             />
             <ul className='w-full flex items-center justify-start flex-col gap-2'>
-                <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+                <DndContext
+                    collisionDetection={closestCenter}
+                    onDragStart={handleDragStart}
+                    onDragEnd={handleDragEnd}
+                >
                     <SortableContext items={words.map((word) => word.id.toString())} strategy={verticalListSortingStrategy}>
                         {words.map((word) => (
                             word[language]?.trim() !== '' ? (
